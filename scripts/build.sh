@@ -3,7 +3,7 @@
 set -euo pipefail
 
 GOOS="linux" go build -ldflags='-s -w' -o bin/helper github.com/paketo-buildpacks/libjvm/v2/cmd/helper
-GOOS="linux" go build -ldflags='-s -w' -o bin/main github.com/paketo-community/ubi-java-buildpack/cmd/main
+GOOS="linux" go build -ldflags='-s -w' -o bin/main github.com/paketo-community/ubi-java-buildpack/v1/cmd/main
 
 if [ "${STRIP:-false}" != "false" ]; then
   strip bin/helper bin/main

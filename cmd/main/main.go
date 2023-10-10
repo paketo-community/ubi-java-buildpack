@@ -1,7 +1,7 @@
 package main
 
 import (
-	ubi8javabuildpack "github.com/paketo-community/ubi-java-buildpack"
+	ubi8javabuildpack "github.com/paketo-community/ubi-java-buildpack/v1"
 
 	libpak "github.com/paketo-buildpacks/libpak/v2"
 )

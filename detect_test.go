@@ -4,7 +4,7 @@ import (
 	"testing"
 
 	libcnb "github.com/buildpacks/libcnb/v2"
-	ubi8javabuildpack "github.com/paketo-community/ubi-java-buildpack"
+	ubi8javabuildpack "github.com/paketo-community/ubi-java-buildpack/v1"
 
 	. "github.com/onsi/gomega"
 	"github.com/sclevine/spec"

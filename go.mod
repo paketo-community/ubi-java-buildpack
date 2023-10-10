@@ -1,4 +1,4 @@
-module github.com/paketo-community/ubi-java-buildpack
+module github.com/paketo-community/ubi-java-buildpack/v1
 
 go 1.19
 
