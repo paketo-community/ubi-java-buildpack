@@ -29,19 +29,8 @@ func testDetect(t *testing.T, context spec.G, it spec.S) {
 
 			Expect(result).To(Equal(
 				libcnb.DetectResult{
-					Pass: true,
-					Plans: []libcnb.BuildPlan{
-						{
-							Provides: []libcnb.BuildPlanProvide{
-								{Name: "ubi-java-helper"},
-							},
-						},
-						{
-							Requires: []libcnb.BuildPlanRequire{
-								{Name: "ubi-java-helper"},
-							},
-						},
-					},
+					Pass:  true,
+					Plans: []libcnb.BuildPlan{},
 				}))
 		})
 	})
