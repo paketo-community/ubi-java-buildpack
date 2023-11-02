@@ -4,7 +4,7 @@ api = "0.9"
 id = "paketo-community/ubi-java-buildpack"
 name = "Paketo UBI Java Helper Buildpack"
 sbom-formats = ["application/vnd.syft+json", "application/vnd.cyclonedx+json"]
-version = "0.0.1"
+version = "{{.version}}"
 clear-env = false
 description = "This helper buildpack configures the java runtime installed via the ubi-java-extension"
 
