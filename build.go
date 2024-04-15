@@ -17,16 +17,24 @@ const openSslLoaderName = "openssl-certificate-loader"
 func Build(context libcnb.BuildContext) (libcnb.BuildResult, error) {
 	result := libcnb.BuildResult{}
 
+
+
 	logger := log.NewPaketoLogger(os.Stdout)
 	logger.Title(context.Buildpack.Info.Name, context.Buildpack.Info.Version, context.Buildpack.Info.Homepage)
 
 	//read the env vars set via the extension.
 	versionb, err := os.ReadFile(javaVersionBuilderFile)
 	if err != nil {
+		if os.IsNotExist(err){
+			return result,nil
+		}
 		return result, err
 	}
 	helperb, err := os.ReadFile(javaHelpersBuilderFile)
 	if err != nil {
+		if os.IsNotExist(err){
+			return result,nil
+		}		
 		return result, err
 	}
 
